@@ -52,3 +52,19 @@
     padding: 5px;
     text-align: justify;
 }
+
+.footer_container{
+    display: flex;
+    justify-content: center;
+    border: solid 1px yellow;
+}
+
+.nav_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px orange;
+    padding: 5px;
+}
