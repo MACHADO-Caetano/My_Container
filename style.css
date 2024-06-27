@@ -1,6 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .header_container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     border: solid 1px black;;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.aside_container{
+    display: flex;
+    width: 15%;
+    height: 100%;
+    float: left;
+    border: solid 1px red;
+    justify-content: center;
+}
+
+.section_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 1px blue;
+    background-color: #f2f2f2;
+    width: 85%;
+    height: 100%;
+    float:left;
 }
