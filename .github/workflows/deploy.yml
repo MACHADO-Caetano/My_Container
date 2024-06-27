@@ -20,5 +20,5 @@ jobs:
         host: ${{ secrets.IP }} # Endereço IP da sua VM
         username: ubuntu # Nome de usuário da sua VM
         key: ${{ secrets.SSH_PRIVATE_KEY }} # Chave SSH privada
-        source: "*" # Copia todos os arquivos
-        target: "/home/ubuntu" # Caminho na sua VM onde você deseja que o arquivo seja transferido
+        source: "index.html" # Copia todos os arquivos
+        target: "/var/www/html" # Caminho na sua VM onde você deseja que o arquivo seja transferido
