@@ -22,7 +22,9 @@
     height: 100%;
     float: left;
     border: solid 1px red;
-    justify-content: center;
+    justify-content:center;
+    flex-direction: column;
+    padding: 5px;
 }
 
 .section_container{
