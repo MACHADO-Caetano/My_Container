@@ -18,13 +18,18 @@
 
 .aside_container{
     display: flex;
-    width: 15%;
+    width: 20%;
     height: 100%;
     float: left;
-    border: solid 1px red;
     justify-content:center;
     flex-direction: column;
     padding: 5px;
+}
+
+.div_aside_container{
+    padding: 5px;
+    margin: 5px;
+    text-align: justify;    
 }
 
 .section_container{
@@ -32,9 +37,9 @@
     justify-content: space-around;
     align-items: center;
     border: solid 1px blue;
-    width: 85%;
+    width: 80%;
     height: 100%;
-    float:left;
+    float:right;
 }
 
 .ajuste_card_section{
