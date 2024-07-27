@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
     <title>Currículo</title>
 </head>
 
-<body style="background-color: #c9c9c9;">
-    <header class="header_container">
+<body style="background-color: black">
+    <header class="header_container">+
         <div style="width: 25%;">
             <img style="border-radius: 10px; margin: 5px; padding: 5px; float:right;"
                 src="imagem/foto perfil linkedin.JPG" alt="foto de perfil">
@@ -18,13 +18,11 @@
         <div style="width: 75%;">
             <h1>Caetano dos Santos Machado</h1>
             <p>Nascimento: 17/07/2003</p>
-            <br>
             <p style="display: flex; text-align: justify; padding: 5px; margin: 5px;">"Muito prazer, sou um estudante do
                 curso de Análise e Desenvolvimento de Sistemas, que está trilhando essa jornada na área da Tecnologia da
                 Informação, para se tornar um grande desenvolvedor!"</p>
         </div>
     </header>
-
 
     <section class="section_container">
         <div>
@@ -32,108 +30,126 @@
         </div>
         <div class="section_container_div_principal">
             <div>
-                <div style="padding: 5px;">
+                <button type="button" onclick='Aparecer_Formacao()'>
                     <h3>Formação:</h3>
-                </div>
-                <div style="padding: 5px;">
-                    <ul>
-                        <li>Ensino Médio</li>
-                    </ul>
-                    <p>Rede Sagrado São Domingos - conclusão: 2021</p>
+                </button>
+                <div style="display: none;" id="formacao">
+                    <div style="padding: 5px;" id="fechamento">
+                        <ul>
+                            <li>Ensino Médio</li>
+                        </ul>
+                        <p>Rede Sagrado São Domingos - conclusão: 2021</p>
+                    </div>
                 </div>
             </div>
             <div>
-                <div style="padding: 5px;">
+                <button type="button" onclick='Aparecer_Softskills()'>
                     <h3>Soft Skills:</h3>
-                </div>
-                <div>
-                    <ul>
-                        <li style="padding: 5px;">Comunicativo</li>
-                        <li style="padding: 5px;">Empenhado</li>
-                        <li style="padding: 5px;">Proativo</li>
-                        <li style="padding: 5px;">Confiável</li>
-                        <li style="padding: 5px;">Aprendizagem fácil</li>
-                    </ul>
+                </button>
+                <div style="display: none;" id="softskills">
+                    <div id="soft">
+                        <ul>
+                            <li style="padding: 5px;">Comunicativo</li>
+                            <li style="padding: 5px;">Empenhado</li>
+                            <li style="padding: 5px;">Proativo</li>
+                            <li style="padding: 5px;">Confiável</li>
+                            <li style="padding: 5px;">Aprendizagem Fácil</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div>
-                <div style="padding: 5px;">
+                <button type="button" onclick="Aparecer_Hardskills()">
                     <h3>Hard Skills:</h3>
-                </div>
-                <div>
-                    <div style="padding: 5px;">
-                        <p>Bom conhecimento em:</p>
-                        <ul>
-                            <li>C# | .NET</li>
-                            <li>Git e versionamento</li>
-                            <li>HTML e CSS</li>
-                        </ul>
-                    </div>
-                    <div style="padding: 5px;">
-                        <p>Conhecimento intermediário em:</p>
-                        <ul>
-                            <li>Python</li>
-                            <li>Ruby</li>
-                        </ul>
+                </button>
+                <div id="hardskills" style="display: none;">
+                    <div id="hard">
+                        <div style="padding: 5px;">
+                            <p>Bom conhecimento em:</p>
+                            <ul>
+                                <li>C# | .NET</li>
+                                <li>Git e versionamento</li>
+                                <li>HTML e CSS</li>
+                            </ul>
+                        </div>
+                        <div style="padding: 5px;">
+                            <p>Conhecimento intermediário em:</p>
+                            <ul>
+                                <li>Python</li>
+                                <li>Ruby</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div>
-                <div style="padding: 5px;">
+                <button type="button" onclick="Aparecer_Experiencias()">
                     <h3>Experiências Anteriores:</h3>
-                </div>
-                <div>
-                    <ul>
-                        <li style="padding: 5px;">Prefeitura de Torres > Estágio CIEE - 2020 | 2021</li>
-                        <li style="padding: 5px;">Prefeitura de Torres > Cargo Comissionado - 2022 | 07/2023</li>
-                        <li style="padding: 5px;">Multipeças > Auxiliar Administrativo - 2023 | Atualmente</li>
-                    </ul>
+                </button>
+                <div style="display: none;" id="experiencia">
+                    <div id="anteriores">
+                        <ul>
+                            <li style="padding: 5px;">Prefeitura de Torres > Estágio CIEE - 2020 | 2021</li>
+                            <li style="padding: 5px;">Prefeitura de Torres > Cargo Comissionado - 2022 | 07/2023</li>
+                            <li style="padding: 5px;">Multipeças > Auxiliar Administrativo - 2023 | Atualmente</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <article class="article_container">
-        <div>
-            <h2>Um pouco sobre mim:</h2>
+    <article class="article_container" id="teste">
+        <button id="botao_mim" style="display: block;" onclick="Aparecer_Sobremim()">
+            <h3>Um pouco sobre mim:</h3>
+        </button>
+        <div class="ajuste_paragrafo" id="mim">
+            <p id="paragrafo">Meu nome é Caetano dos Santos Machado, moro na cidade de Torres/RS, litoral norte gaúcho,
+                e estudo Análise e Desenvolvimento de Sistemas no polo da Universidade Luterana do Brasil (ULBRA), desde
+                agosto de 2023, e estou trilhando essa caminhada no mundo da programação e desenvolvimento de sistemas.
+                Comecei minha primeira experiência trabalhista como estagiário, na prefeitura do município de Torres, e
+                ali fui começando a crescer, desde Office Boy, até recepcionista e auxiliar administrativo. Neste tempo,
+                me inscrevi no curso de ADS no polo da ULBRA de Torres, onde comecei as primeiras experiências com
+                programação e com desenvolvimento, e foi paixão à primeira vista, o que me impulsionou muito para buscar
+                mais sobre essa profissão de desenvolvedor e me interessar cada vez mais na possibilidade de trabalhar
+                com tecnologia!</p>
+            <p id="paragrafo">Esta página da web, foi um primeiro projeto que decidi compartilhar, após meu segundo
+                semestre no curso de ADS, onde aprendi como funciona brevemente o desenvolvimento web, como trabalhar
+                com Docker, com GitHub Actions, um pouco de conceitos de CI/CD e também sobre Máquinas Virtuais e DNS.
+                Foi muito interessante, e aprendi muito, aproveitei para testar alguns comandos em Javascript, e
+                pretendo aprimorar esta página com mais e mais recursos.</p>
+            <p id="paragrafo">Estou sentindo uma proximidade bem grande com o desenvolvimento web, gostaria muito de uma
+                oportunidade na área, e cada vez mais estarei apresentando novos projetos!</p>
         </div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ad possimus doloribus, harum sequi saepe
-            dolor quam at quas voluptate incidunt nostrum dolore laboriosam, reprehenderit, quia veritatis nesciunt
-            aspernatur obcaecati?
-            Voluptatem tenetur deserunt reiciendis laborum facilis delectus nostrum eius iste excepturi magni, sequi vel
-            sint at ab soluta? Odit ullam porro fugit molestiae recusandae pariatur similique ad corporis! Nesciunt,
-            deserunt.
-            Mollitia debitis sint exercitationem, cum dolorum quisquam culpa nulla et asperiores, at nobis sapiente
-            accusantium sunt voluptatum. Fugiat, dicta expedita repellendus maiores culpa dolorem assumenda at, beatae
-            quaerat asperiores neque!</div>
     </article>
 
+    <div class="container_redes">
+        <div style="display: flex; justify-content: center; margin: 5px; padding: 5px;">
+            <h2>Visite minhas redes:</h2>
+        </div>
+        <div style="margin: 5px; padding: 5px; display: flex; justify-content: space-around;">
+
+            <i class="fa-brands fa-instagram"></i><a target="_blank" href="https://www.instagram.com/caetano_machado_/">
+                Me siga no instagram!</a>
+
+            <i class="fa-brands fa-github"></i><a target="_blank" href="https://github.com/MACHADO-Caetano">
+                Veja meus repositórios!</a>
+
+            <i class="fa-brands fa-linkedin"></i><a target="_blank"
+                href="https://www.linkedin.com/in/caetano-machado-7b1b3b1b3/">
+                Me acompanhe no linkedin!</a>
+
+            <i class="fa-brands fa-whatsapp"></i><a target="_blank"
+                href="https://api.whatsapp.com/send?phone=555180467717">Meu contato!</a>
+
+            <i class="fa-regular fa-envelope"></i>
+            <p>Meu e-mail para contato: machadocaetano@rede.ulbra.br</p>
+        </div>
+    </div>
+
     <footer class="footer_container">
-        <div>
-            <h2>Developed by Caetano Machado</h2>
-        </div>
-        <div>
-            <a target="_blank" href="https://www.instagram.com/caetano_machado_/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a target="_blank" href="https://github.com/MACHADO-Caetano">
-                <i class="fa-brands fa-github"></i>
-            </a>
-
-            <a target="_blank" href="https://www.linkedin.com/in/caetano-machado-7b1b3b1b3/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-        </div>
+        <h4 style="margin: 5px; padding: 5px;">Espero que tenha prestigiado este projeto e conhecido mais um pouquinho sobre mim, será um grande prazer retomar o contato!</h4>
+        <p style="margin: 5px; padding: 5px;">Developed by Caetano Machado</p>
     </footer>
 </body>
-
 </html>
-
-<!-- <nav class="nav_container">
-    <div>
-        <h2>Minhas redes:</h2>
-    </div>
-    
-        
-</nav> -->
