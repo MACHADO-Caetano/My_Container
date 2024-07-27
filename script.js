@@ -56,5 +56,4 @@ function Aparecer_Sobremim(){
         document.getElementById('mim').style.display = 'none'
         artigo.removeChild(testeAparecer)
     })
-
 }
